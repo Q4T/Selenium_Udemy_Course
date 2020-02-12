@@ -46,6 +46,39 @@ namespace ConsoleAppFormattingText
             Console.WriteLine("------------------------------------------------");
             Console.WriteLine(file2);
             Console.WriteLine("------------------------------------------------");
+
+            /****************************************************************************************************** 
+            Lesson 35. Declaring vars of simple types
+            Lesson 36. Formatting and concatenation
+            Lesson 37. String interpolation 
+            *******************************************/
+
+            // ask for a number
+            int numberRead;
+            string userFirstName;
+            string age;
+            string response;
+            string response1;
+
+            // ask for a number
+            Console.WriteLine("Enter a number");
+            numberRead = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The Number you selected is " + numberRead);
+
+            //ask name and age
+            Console.WriteLine("Enter first name");
+            userFirstName = Console.ReadLine();
+            Console.WriteLine("Enter your age");
+            age = Console.ReadLine();
+
+            response = "Your name is " + userFirstName + " and you are " + age + " years old";
+            response1 = $"Your name is {userFirstName} and you are {age} years old";
+
+            // write out a response
+            Console.WriteLine(response);
+            Console.WriteLine(response1);
+
+
         }
     }
 }
