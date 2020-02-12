@@ -51,7 +51,7 @@ namespace ConsoleAppFormattingText
             Lesson 35. Declaring vars of simple types
             Lesson 36. Formatting and concatenation
             Lesson 37. String interpolation 
-            *******************************************/
+            *******************************************************************************************************/
 
             // ask for a number
             int numberRead;
