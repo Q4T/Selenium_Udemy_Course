@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Section4_UnitTest
 {
     [TestClass]
-    [TestCategory("Quiz")]
+    [TestCategory("Attributes_TestInitialize")]
     /* ********************
      * look up uncle Bob  dev. 
      * 
@@ -24,11 +24,17 @@ namespace Section4_UnitTest
      * [ClassCleanup]       // has to be static
      * 
      * TestContext  // Trace.Write(_testContext.TestName); - These comments only appear in the debug output window.
+     * The comments made by the Trace.Write method are known 
      * 
      * TestInitialize   very important and used a lot in Selenium, We can initialise the Web Driver in here.
      * 
      * All Test methods HAVE to be public
-     * All TEst methods have to be VOID i.e. not return anything.
+     * All Test methods have to be VOID i.e. not return anything.
+     * [ClassInitialize] has to be static void and take a TestContext variable
+     * [ClassCleanup]  has to be static void
+     * 
+     * 
+     * ****** ISSUE Class "Attributes" is currently keeping the test name as TestCase01 ***************
      * 
      * *******************/
 
@@ -38,51 +44,52 @@ namespace Section4_UnitTest
 
         private int a;    // declared at class level
 
-        public TestContext Test2Context { get; set;}     // ********  Lesson 52 TestContext
+        public TestContext AttributesContext { get; set;}     // ********  Lesson 52 TestContext
         private static TestContext _testContext;
       
         [ClassInitialize]
-        public static void StartOfClass(TestContext testContext)
+        public static void StartOfClass(TestContext testContext)   // passes in a TestContext variable.
         {
             // initialise stuff at class level
             _testContext = testContext;
+            Trace.WriteLine("TestContext has been initialised");
         }
 
         [ClassCleanup]
         public static void ClassCleanUp()
         {
             // clean up at the end of the class after all test done 
-
         }
-
 
         [TestInitialize]  // initialise before each and every test
         public void RunbeforeEverytest()  // initialise before each and every test
         {
             a = 1;    // set var here once
+            var testName = _testContext.TestName;
+            Trace.WriteLine("-----------------  In TestInitialize the test name is assigned as: " + testName);
         }
-
 
         [TestCleanup]
         public void RunAfterEachTest()
         {
-            Trace.Write("Test: "+_testContext.TestName + "  has completed -------------------------");
-            Trace.Write("Test: " + _testContext.CurrentTestOutcome);
+           // Trace.WriteLine("DEBUG: Test: "+_testContext.TestName + "  has completed -------------------------");
+            Trace.WriteLine("DEBUG: " + _testContext.TestName + ": has completed -------------------------");
+            Trace.WriteLine("DEBUG: Test: " + _testContext.TestName + " " + _testContext.CurrentTestOutcome);
             // destroy objects etc. 
         }
 
-
         [TestMethod]
-        public void test1()
+        public void TestCase01()
         {
-            Trace.Write(_testContext.TestName);
+            Trace.WriteLine(_testContext.TestName);
             var b = 1;
             Assert.AreEqual(2, a + b);
         }
         [TestMethod]
-        public void test2()
+        public void TestCase02()
         {
-           // a = 1;
+            Trace.WriteLine(_testContext.TestName);
+            // a = 1;
             var y = 2;
             Assert.AreEqual(3, a + y);
           //  Assert.Fail();     // forces a failure
@@ -90,8 +97,9 @@ namespace Section4_UnitTest
 
         [TestMethod]
         [ExpectedException(typeof(AssertFailedException))]
-        public void test3()
+        public void TestCase03()
         {
+            Trace.WriteLine(_testContext.TestName);
             int x = 10;
             int b = 10;
             Assert.AreEqual(21, x + b);
