@@ -8,9 +8,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Section4_UnitTest
 {
-    [TestClass]
-    [TestCategory("Attributes_TestInitialize")]
-    /* ********************
+
+    /* *******************************************************************************************
      * look up uncle Bob  dev. 
      * 
      * Lesson 50 TestInitialize
@@ -34,23 +33,32 @@ namespace Section4_UnitTest
      * [ClassCleanup]  has to be static void
      * 
      * 
-     * ****** ISSUE Class "Attributes" is currently keeping the test name as TestCase01 ***************
+     * ****** ISSUE Class "Attributes" is currently keeping the test name as TestCase01 *******
      * 
-     * *******************/
+     * ************************************************************************************************/
+
+    [TestClass]
+    [TestCategory("Attributes_TestInitialize")]
 
 
     public class Attributes
     {
 
         private int a;    // declared at class level
-
-        public TestContext AttributesContext { get; set;}     // ********  Lesson 52 TestContext
         private static TestContext _testContext;
-      
+
+        // public TestContext tContext;
+
+        public TestContext TestContext { get; set;}     // ********  Lesson 52 TestContext
+        //  private static TestContext _testContext;
+        // private static TestContext _testContext;
+
+
         [ClassInitialize]
-        public static void StartOfClass(TestContext testContext)   // passes in a TestContext variable.
+        public static void RunsBeforeAllTestMethods(TestContext testContext)   // passes in a TestContext variable.
         {
-            // initialise stuff at class level
+         // initialise stuff at class level
+          
             _testContext = testContext;
             Trace.WriteLine("TestContext has been initialised");
         }
@@ -62,33 +70,29 @@ namespace Section4_UnitTest
         }
 
         [TestInitialize]  // initialise before each and every test
-        public void RunbeforeEverytest()  // initialise before each and every test
+        public void RunBeforeEverytest()  // initialise before each and every test
         {
-            a = 1;    // set var here once
-            var testName = _testContext.TestName;
-            Trace.WriteLine("-----------------  In TestInitialize the test name is assigned as: " + testName);
+            a = 1;
         }
 
         [TestCleanup]
         public void RunAfterEachTest()
         {
-           // Trace.WriteLine("DEBUG: Test: "+_testContext.TestName + "  has completed -------------------------");
-            Trace.WriteLine("DEBUG: " + _testContext.TestName + ": has completed -------------------------");
-            Trace.WriteLine("DEBUG: Test: " + _testContext.TestName + " " + _testContext.CurrentTestOutcome);
-            // destroy objects etc. 
+        // nothing here
         }
 
         [TestMethod]
         public void TestCase01()
         {
-            Trace.WriteLine(_testContext.TestName);
+            Trace.WriteLine(TestContext.TestName);
+           // Trace.Write(testContext.Testname);
             var b = 1;
             Assert.AreEqual(2, a + b);
         }
         [TestMethod]
         public void TestCase02()
         {
-            Trace.WriteLine(_testContext.TestName);
+            Trace.WriteLine(TestContext.TestName);
             // a = 1;
             var y = 2;
             Assert.AreEqual(3, a + y);
@@ -99,7 +103,7 @@ namespace Section4_UnitTest
         [ExpectedException(typeof(AssertFailedException))]
         public void TestCase03()
         {
-            Trace.WriteLine(_testContext.TestName);
+            Trace.WriteLine(TestContext.TestName);
             int x = 10;
             int b = 10;
             Assert.AreEqual(21, x + b);
