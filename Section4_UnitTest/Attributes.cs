@@ -23,7 +23,7 @@ namespace Section4_UnitTest
      * [TestCleanup]
      * [ClassCleanup]       // has to be static
      * 
-     * TestContext  // 
+     * TestContext  // Trace.Write(_testContext.TestName); - These comments only appear in the debug output window.
      * 
      * TestInitialize   very important and used a lot in Selenium, We can initialise the Web Driver in here.
      * 
@@ -33,7 +33,7 @@ namespace Section4_UnitTest
      * *******************/
 
 
-    public class Tests2
+    public class Attributes
     {
 
         private int a;    // declared at class level
@@ -66,6 +66,8 @@ namespace Section4_UnitTest
         [TestCleanup]
         public void RunAfterEachTest()
         {
+            Trace.Write("Test: "+_testContext.TestName + "  has completed -------------------------");
+            Trace.Write("Test: " + _testContext.CurrentTestOutcome);
             // destroy objects etc. 
         }
 
@@ -73,7 +75,7 @@ namespace Section4_UnitTest
         [TestMethod]
         public void test1()
         {
-           // a = 1;
+            Trace.Write(_testContext.TestName);
             var b = 1;
             Assert.AreEqual(2, a + b);
         }

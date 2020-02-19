@@ -51,7 +51,7 @@
   <ItemGroup>
     <Compile Include="Attributes_Assertions_and_exceptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests2.cs" />
+    <Compile Include="Attributes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
