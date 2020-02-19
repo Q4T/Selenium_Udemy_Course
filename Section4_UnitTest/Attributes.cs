@@ -33,7 +33,6 @@ namespace Section4_UnitTest
      * [ClassCleanup]  has to be static void
      * 
      * 
-     * ****** ISSUE Class "Attributes" is currently keeping the test name as TestCase01 *******
      * 
      * ************************************************************************************************/
 
@@ -43,22 +42,15 @@ namespace Section4_UnitTest
 
     public class Attributes
     {
-
         private int a;    // declared at class level
         private static TestContext _testContext;
 
-        // public TestContext tContext;
-
         public TestContext TestContext { get; set;}     // ********  Lesson 52 TestContext
-        //  private static TestContext _testContext;
-        // private static TestContext _testContext;
-
 
         [ClassInitialize]
         public static void RunsBeforeAllTestMethods(TestContext testContext)   // passes in a TestContext variable.
         {
          // initialise stuff at class level
-          
             _testContext = testContext;
             Trace.WriteLine("TestContext has been initialised");
         }
@@ -85,7 +77,6 @@ namespace Section4_UnitTest
         public void TestCase01()
         {
             Trace.WriteLine(TestContext.TestName);
-           // Trace.Write(testContext.Testname);
             var b = 1;
             Assert.AreEqual(2, a + b);
         }
@@ -93,7 +84,6 @@ namespace Section4_UnitTest
         public void TestCase02()
         {
             Trace.WriteLine(TestContext.TestName);
-            // a = 1;
             var y = 2;
             Assert.AreEqual(3, a + y);
           //  Assert.Fail();     // forces a failure
