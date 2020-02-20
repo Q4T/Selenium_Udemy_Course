@@ -15,7 +15,7 @@ namespace Section_5_Maths_Equality_and_Rational_Operators
     [TestClass]
     public class DecimalOperations
     {
-        static decimal num1;  // upto 29 
+        static decimal num1;  
         static decimal num2;
 
         [ClassInitialize()]

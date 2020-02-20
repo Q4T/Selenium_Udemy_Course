@@ -53,6 +53,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FloatingPointOperations.cs" />
     <Compile Include="DecimalOperations.cs" />
+    <Compile Include="SectionQuiz.cs" />
+    <Compile Include="EqualityAndRelationships.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
