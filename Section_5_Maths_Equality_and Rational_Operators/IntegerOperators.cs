@@ -23,9 +23,7 @@ namespace Section_5_Maths_Equality_and_Rational_Operators
         {
             number1 = 10;
             number2 = 5;
-
         }
-
 
         [TestMethod]
         public void Test_Addition()
