@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section4_UnitTest", "Sectio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppFormattingText", "ConsoleAppFormattingText\ConsoleAppFormattingText.csproj", "{A8E08717-B11F-41D9-B6DC-E4C0DE72C222}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_5_Maths_Equality_and Rational_Operators", "Section_5_Maths_Equality_and Rational_Operators\Section_5_Maths_Equality_and Rational_Operators.csproj", "{0C254E73-2E2B-4CA2-B826-942F5C0F78D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A8E08717-B11F-41D9-B6DC-E4C0DE72C222}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8E08717-B11F-41D9-B6DC-E4C0DE72C222}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8E08717-B11F-41D9-B6DC-E4C0DE72C222}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C254E73-2E2B-4CA2-B826-942F5C0F78D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C254E73-2E2B-4CA2-B826-942F5C0F78D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C254E73-2E2B-4CA2-B826-942F5C0F78D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C254E73-2E2B-4CA2-B826-942F5C0F78D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
