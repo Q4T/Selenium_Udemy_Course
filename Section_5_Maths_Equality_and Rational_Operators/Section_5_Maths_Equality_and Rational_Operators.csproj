@@ -55,6 +55,8 @@
     <Compile Include="DecimalOperations.cs" />
     <Compile Include="SectionQuiz.cs" />
     <Compile Include="EqualityAndRelationships.cs" />
+    <Compile Include="IfAndElse.cs" />
+    <Compile Include="SectionExamAsUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

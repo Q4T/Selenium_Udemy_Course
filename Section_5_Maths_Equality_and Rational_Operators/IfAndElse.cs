@@ -4,14 +4,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Section_5_Maths_Equality_and_Rational_Operators
 {
     /**
-     * Lesson 59 If Statements
      * Lesson 60 if Else Statements
-     * We should never have more than 1 assertion per test method
+     * We should never have more than 1 assertion per test method ? But the teacher keeps using them, dores it mean per logic branch?
      *
      **/
 
     [TestClass]
-    public class EqualityAndRelationships
+    public class IfAndElse
     {
         static int num1;
         static int num2;
@@ -31,8 +30,12 @@ namespace Section_5_Maths_Equality_and_Rational_Operators
             {
                 Assert.IsTrue(num1 == num2);
             }
-            Assert.IsFalse(num1 == num2);       
-            
+            else
+            {
+                Assert.Fail();
+            }
+           
+
         }
 
         [TestMethod]
@@ -42,23 +45,35 @@ namespace Section_5_Maths_Equality_and_Rational_Operators
             {
                 Assert.IsTrue(num1 != num2);
             }
+            else
+            {
+                Assert.Fail();
+            }
         }
 
         [TestMethod]
         public void Num1GreaterThanNum2()
         {
-            if(num1 > num2)
+            if (num1 > num2)
             {
                 Assert.IsTrue(num1 > num2);
+            }
+            else
+            {
+                Assert.Fail();
             }
         }
 
         [TestMethod]
         public void Num1isLessThanOrEqualToNum2()
         {
-            if(num1 <= num2)
+            if (num1 <= num2)
             {
                 Assert.IsTrue(num1 <= num2);
+            }
+            else
+            {
+                Assert.Fail();
             }
         }
 

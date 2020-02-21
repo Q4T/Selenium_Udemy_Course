@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppFormattingText", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_5_Maths_Equality_and Rational_Operators", "Section_5_Maths_Equality_and Rational_Operators\Section_5_Maths_Equality_and Rational_Operators.csproj", "{0C254E73-2E2B-4CA2-B826-942F5C0F78D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_5_Exam", "Section_5_Exam\Section_5_Exam.csproj", "{6BF813F2-6916-459C-8F85-FEE6956C1F40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0C254E73-2E2B-4CA2-B826-942F5C0F78D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C254E73-2E2B-4CA2-B826-942F5C0F78D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C254E73-2E2B-4CA2-B826-942F5C0F78D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BF813F2-6916-459C-8F85-FEE6956C1F40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BF813F2-6916-459C-8F85-FEE6956C1F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BF813F2-6916-459C-8F85-FEE6956C1F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BF813F2-6916-459C-8F85-FEE6956C1F40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
