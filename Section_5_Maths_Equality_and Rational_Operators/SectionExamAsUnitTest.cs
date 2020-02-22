@@ -20,6 +20,7 @@ namespace Section_5_Maths_Equality_and_Rational_Operators
             StringAssert.Equals(result, "Yes");
         }
 
+        // method that tests the year
         public string isLeapYear(int givenYear)
         {
             int nYear;
@@ -34,7 +35,14 @@ namespace Section_5_Maths_Equality_and_Rational_Operators
             // what is the year?
             nYear = givenYear;
 
-            // check year to see if divisible
+            // check year to see if divisible by 4, 100 & 400 and return yes or no 
+            // and assign a string variable with a message to write to console.
+            // 
+            // so this should be multiple methods really
+            //  WriteToConsoleDivisibleBy   to check divisability and assign a string to output like Divisible by 400: Yes
+            //  
+            
+
             nFourH = nYear % 400;
             if (nFourH == 0)
             {
