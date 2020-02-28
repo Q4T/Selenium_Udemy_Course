@@ -10,24 +10,31 @@ namespace Section_6_Classes_And_Methods
      * 
      * Lesson 66 Writing a class
      * Lesson 67 Getters and Setters
-     * Lesson 68 COnstructors
+     * Lesson 68 Constructors
+     * Lesson 69 methods in classes
+     * lesson 70 Instatiate a class
+     * 
+     * if we don't set a constructor a default will be set
+     * We can set multiple constructors to allow different numbers of variables
      * 
      * *************************************************************/
     class Car
     {
-
         // private variables
         string colour;    //this is a property
         int numOfDoors;
         bool isConvertable;
 
         // Constructor
-        public Car ()   // no return type
-        {
+        public Car (string carColour, int doors, bool convertable)   // no return type
+        {   // specifying the paramaters means we cannot have a class without these being set.
 
+            Colour = carColour; // set the passed in variable to the setter and getter
+            NumOfDoors = doors;
+            IsConvertable = convertable;
         }
  
-        // Get and Sett accessors - properties that define noun like atributes of the class
+        // Get and Set accessors - properties that define noun like atributes of the class
         public string Colour // this is a property (getter and setter) and so has NO Parenthases
         {
             get
@@ -71,5 +78,22 @@ namespace Section_6_Classes_And_Methods
 
 
         // Methods - Verb attributes
+        public void Accelerate()
+        {
+            Console.WriteLine("I am accelerating");
+        }
+
+        public bool FamilyCar()
+        {
+            if (NumOfDoors >= 4)  // always query the accessor never the class var directly
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
     }
 }
