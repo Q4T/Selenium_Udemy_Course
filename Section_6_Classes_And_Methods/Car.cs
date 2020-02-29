@@ -70,12 +70,7 @@ namespace Section_6_Classes_And_Methods
 
             }
 
-          
-
-
         }
-
-
 
         // Methods - Verb attributes
         public void Accelerate()

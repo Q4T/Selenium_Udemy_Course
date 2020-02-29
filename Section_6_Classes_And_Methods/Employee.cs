@@ -17,7 +17,7 @@ namespace Section_6_Classes_And_Methods
         private string department;
         private decimal monthlySalary;
 
-        // constructor
+        // constructor 1
         public Employee(int empNum, string firName, string lasName, string DOFHire, string JobDesc, string dept, decimal MonthSalary)
         {
             EmployeeNum = empNum;
@@ -29,6 +29,7 @@ namespace Section_6_Classes_And_Methods
             MonthlySalary = MonthSalary;
         }
 
+        // constructor 2
         public Employee (string firName, string lasName)
         {
             FirstName = firName;
@@ -37,15 +38,39 @@ namespace Section_6_Classes_And_Methods
 
         public int EmployeeNum
         {
-            get; set;
+            get
+            {
+                return employeeNum;
+            }
+
+            set
+            {
+                employeeNum = value;
+            }   
+                
+              
         }
         public string FirstName
         {
-            get; set;
+            get
+            {
+                return firstName;
+            }
+            set
+            {
+                firstName = value;
+            }
         }
         public string LastName
         {
-            get; set;
+            get
+            {
+                return lastName;
+            }
+            set
+            {
+                lastName = value;
+            }
         }
         public string DateOfHire
         {
@@ -64,11 +89,18 @@ namespace Section_6_Classes_And_Methods
             get; set;
         }
 
+        // methods
         public string FirstName_LastName()
         {
+           /*
             string fName = FirstName;
             string lName = LastName;
             return fName + " " + lName;
+            */
+
+            // teacher did this
+            return FirstName + " " + LastName;  // calling the getters directly which is more efficient!!
+
         }
         public string SortingName()
         {
