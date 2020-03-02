@@ -14,6 +14,9 @@ namespace Section_6_Classes_And_Methods
             //act
             string firstThenlast = clsEmployee.FirstName_LastName();
             Console.WriteLine(firstThenlast);
+            // utilise the ToString method (works automatically)
+            Console.WriteLine(clsEmployee));
+
             //assert
             StringAssert.Equals(firstThenlast, "Harry Hill");
         }
@@ -45,8 +48,22 @@ namespace Section_6_Classes_And_Methods
             StringAssert.Equals(sortingName, "Bragg, Billy");
         }
 
+        [TestMethod]
+        public void TestEmployeeNumSet()
+        {
+            Employee emp = new Employee("Phil", "Phang");
+            emp.JobDescription = "manager";
+            string jobLocation = emp.JobLocation();
+            StringAssert.Equals(jobLocation, "Boston");
+        }
+
+        [TestMethod]
+        public void To_String_Test()
+        {
+            Employee emp = new Employee("Willy", "Wonka");
 
 
+        }
 
 
     }

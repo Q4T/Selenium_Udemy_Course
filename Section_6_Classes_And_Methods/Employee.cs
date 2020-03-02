@@ -108,5 +108,23 @@ namespace Section_6_Classes_And_Methods
             string lName = LastName;
             return lName + ", " + fName;
         }
+        public string JobLocation()
+        {
+            if (JobDescription == "manager")
+            {
+                return "Boston";
+            }
+            else if (JobDescription == "staff")
+            {
+                return "Chicago";
+            }
+            return "New York";
+        }
+        // because we are overriding the ToString method (from base class Object) when we call Console.WriteLine(<instantiationName>) 
+        // it will use this format below
+        public override string ToString()
+        {
+            return EmployeeNum + " " + FirstName + " " + " Job Description: " + JobDescription;
+        }
     }
 }
