@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section_5_Exam", "Section_5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_6_Classes_And_Methods", "Section_6_Classes_And_Methods\Section_6_Classes_And_Methods.csproj", "{CCAA9D75-30BF-4347-9566-B77E8228E068}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_7_Midterm_Exam_Retail_Store", "Section_7_Midterm_Exam\Section_7_Midterm_Exam_Retail_Store.csproj", "{C939683C-CB66-4E26-AA58-5FECBFB9663B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CCAA9D75-30BF-4347-9566-B77E8228E068}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCAA9D75-30BF-4347-9566-B77E8228E068}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCAA9D75-30BF-4347-9566-B77E8228E068}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C939683C-CB66-4E26-AA58-5FECBFB9663B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C939683C-CB66-4E26-AA58-5FECBFB9663B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C939683C-CB66-4E26-AA58-5FECBFB9663B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C939683C-CB66-4E26-AA58-5FECBFB9663B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
