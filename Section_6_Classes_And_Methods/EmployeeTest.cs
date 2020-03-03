@@ -15,7 +15,7 @@ namespace Section_6_Classes_And_Methods
             string firstThenlast = clsEmployee.FirstName_LastName();
             Console.WriteLine(firstThenlast);
             // utilise the ToString method (works automatically)
-            Console.WriteLine(clsEmployee));
+            Console.WriteLine(clsEmployee);
 
             //assert
             StringAssert.Equals(firstThenlast, "Harry Hill");
