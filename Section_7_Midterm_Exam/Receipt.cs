@@ -46,9 +46,7 @@ namespace Section_7_Midterm_Exam
             }
             set
             {
-                receiptNumber = value;
-
-                if (receiptNumber > 0)
+                if (value > 0)
                 {
                     receiptNumber = value;
                 }
@@ -72,7 +70,7 @@ namespace Section_7_Midterm_Exam
             }
             set
             {
-                if (customerNumber > 0)
+                if (value > 0)
                 {
                     customerNumber = value;
                 }
@@ -110,7 +108,7 @@ namespace Section_7_Midterm_Exam
             }
             set
             {
-                if (itemNumber > 0 && itemNumber < 9999)
+                if (value > 0 && value < 9999)
                 {
                     itemNumber = value;
                 }
@@ -128,11 +126,11 @@ namespace Section_7_Midterm_Exam
         {
             get
             {
-                return UnitPrice;
+                return unitPrice;
             }
             set
             {
-                if (unitPrice > 0 && unitPrice < 9999)
+                if (value > 0 && value < 9999)
                 {
                     unitPrice = value;
                 }
@@ -151,7 +149,7 @@ namespace Section_7_Midterm_Exam
             }
             set
             {
-                if (quantityPurchased>0)
+                if (value > 0)
                 {
                     quantityPurchased = value;
                 }
@@ -168,12 +166,12 @@ namespace Section_7_Midterm_Exam
             return QuantityPurchased * UnitPrice;
         }
 
-  //      public override string ToString()
-  //      {
-  //          return "Customer: " + CustomerFirstName + " " + CustomerLastName +
-  //          "\nPhone: " + CustomerPhoneNumber +
-  //          "\nTotal Purchases: " + TotalCost().ToString("c");
-  //      }
+        public override string ToString()
+        {
+            return "Customer: " + CustomerFirstName + " " + CustomerLastName +
+            "\nPhone: " + CustomerPhoneNumber +
+            "\nTotal Purchases: " + TotalCost().ToString("c");
+        }
 
 
     }
