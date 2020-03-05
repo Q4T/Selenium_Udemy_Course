@@ -102,10 +102,11 @@ namespace Section_7_Midterm_Exam
         }
 
         [TestMethod]
-        public void ToStringTest()
+        public void DisplayTest()
         {
             Receipt rec = new Receipt(100, "01/01/2010", 1, "Wilf", "Winkerly", "4 google st", "07937 5567 8656", 666, "Waffle Iron", 10M, 2);
             Console.WriteLine(rec);
+            Console.WriteLine(rec.TotalCost());
         }
     }
 }

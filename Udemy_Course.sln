@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_6_Classes_And_Metho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_7_Midterm_Exam_Retail_Store", "Section_7_Midterm_Exam\Section_7_Midterm_Exam_Retail_Store.csproj", "{C939683C-CB66-4E26-AA58-5FECBFB9663B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_8_Repitition", "Section_8_Repitition\Section_8_Repitition.csproj", "{EC810428-9E00-4DD1-9DE7-CA2ED9F13C23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{C939683C-CB66-4E26-AA58-5FECBFB9663B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C939683C-CB66-4E26-AA58-5FECBFB9663B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C939683C-CB66-4E26-AA58-5FECBFB9663B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC810428-9E00-4DD1-9DE7-CA2ED9F13C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC810428-9E00-4DD1-9DE7-CA2ED9F13C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC810428-9E00-4DD1-9DE7-CA2ED9F13C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC810428-9E00-4DD1-9DE7-CA2ED9F13C23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
