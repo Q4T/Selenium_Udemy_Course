@@ -36,5 +36,22 @@ namespace Section_8_Repitition
             Console.WriteLine("Post increment num-- value is {0} ", num--); //takes the num as is (3) prints then takes one off to give 2
             Console.WriteLine("Pre increment --num value is {0} ", --num);   // takes odd 1 to make 1, then prints it
         }
+
+        [TestMethod]
+        public void Nested_Loops()
+        {
+            int num1 = 0;
+            int num2 = 0;
+            while (num1 <= 5)
+            {
+                while (num2 < num1)
+                {
+                    Console.WriteLine(num2);
+                    num2++;
+                }// inneer loop
+                num1++;
+            }//outer loop
+                
+        }
     }
 }
