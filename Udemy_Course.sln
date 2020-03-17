@@ -15,9 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_6_Classes_And_Metho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_7_Midterm_Exam_Retail_Store", "Section_7_Midterm_Exam\Section_7_Midterm_Exam_Retail_Store.csproj", "{C939683C-CB66-4E26-AA58-5FECBFB9663B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_8_Repitition", "Section_8_Repitition\Section_8_Repitition.csproj", "{EC810428-9E00-4DD1-9DE7-CA2ED9F13C23}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_8_Repetition", "Section_8_Repitition\Section_8_Repetition.csproj", "{EC810428-9E00-4DD1-9DE7-CA2ED9F13C23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopExample", "LoopExample\LoopExample.csproj", "{AD734790-FED5-459E-B802-3CB13A8C6BD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopExample", "LoopExample\LoopExample.csproj", "{AD734790-FED5-459E-B802-3CB13A8C6BD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

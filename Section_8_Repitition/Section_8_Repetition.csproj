@@ -49,9 +49,13 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ItemPrice.cs" />
     <Compile Include="CodingQuiz.cs" />
     <Compile Include="ForLoops.cs" />
     <Compile Include="DoWhileLoops.cs" />
+    <Compile Include="SwitchStatement.cs" />
+    <Compile Include="BreakAndContinue.cs" />
+    <Compile Include="ItemPrice_Test.cs" />
     <Compile Include="WhileLoops.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
