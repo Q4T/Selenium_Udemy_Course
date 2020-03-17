@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CodingQuiz.cs" />
+    <Compile Include="ForLoops.cs" />
+    <Compile Include="DoWhileLoops.cs" />
     <Compile Include="WhileLoops.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
