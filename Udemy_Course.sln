@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_8_Repetition", "Sec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopExample", "LoopExample\LoopExample.csproj", "{AD734790-FED5-459E-B802-3CB13A8C6BD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_9_Methods", "Section_9_Methods\Section_9_Methods.csproj", "{10491E67-FBF4-49EE-8AF1-56653DA82639}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{AD734790-FED5-459E-B802-3CB13A8C6BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD734790-FED5-459E-B802-3CB13A8C6BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD734790-FED5-459E-B802-3CB13A8C6BD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10491E67-FBF4-49EE-8AF1-56653DA82639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10491E67-FBF4-49EE-8AF1-56653DA82639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10491E67-FBF4-49EE-8AF1-56653DA82639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10491E67-FBF4-49EE-8AF1-56653DA82639}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
