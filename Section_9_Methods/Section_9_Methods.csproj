@@ -51,9 +51,11 @@
   <ItemGroup>
     <Compile Include="Employee.cs" />
     <Compile Include="MathHelper.cs" />
-    <Compile Include="MethodsCallStack.cs" />
+    <Compile Include="MethodsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CodingQuiz_MathFunctions.cs" />
+    <Compile Include="PropertyTaxCalculator.cs" />
+    <Compile Include="Test_PropertyTaxCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
