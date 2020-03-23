@@ -6,10 +6,19 @@ namespace Section_10_Quiz
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            // test the input to see if they fall in a valid range (0 - 10 inclusive)
+            Console.WriteLine("Enter a value");
+            string input = Console.ReadLine();
+            int iInput = Convert.ToInt32(input);
+           // Console.WriteLine("Value input is " + input);
 
-            // when acceptable values are entered keep a count of each acceptable entry into an array (count how many times a value is in the array and add1 to it if its >0)
+            // test the input to see if they fall in a valid range (0 - 10 inclusive)
+            if(iInput >= 0 || iInput <= 10)
+            {
+                // add it to an array
+              
+            }
+
+            // when acceptable values are entered capture ther value and keep a count of each acceptable entry into an array (count how many times a value is in the array and add1 to it if its >0)
 
             // when invalid integers values are entered add the sum of invalid integers into an array
 
