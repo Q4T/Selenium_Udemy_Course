@@ -4,6 +4,7 @@ namespace Section_10_Quiz
 {
     class ValidateAndDisplayInput
     {
+       
 
         static void Main(string[] args)
         {
@@ -85,19 +86,6 @@ namespace Section_10_Quiz
             }
             return cntInvalidEntries;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             // when acceptable values are entered capture ther value and keep a count of each acceptable entry into an array (count how many times a value is in the array and add1 to it if its >0)
