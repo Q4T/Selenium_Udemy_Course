@@ -12,7 +12,7 @@ namespace Section_10_ArraysAndLists
         {
             // create the list
             ArrayList dataList = new ArrayList();
-            dataList.Add("someday");
+            dataList.Add("wibble");
             dataList.Add(2);
             dataList.Add("app");
             dataList.Add(13.5);
@@ -24,52 +24,38 @@ namespace Section_10_ArraysAndLists
             dataList.Add(18M);
             dataList.Add("woof woof");
             dataList.Add(14);
-;
-            // pass thie list into a method
-            RemoveNonValidNumericData(dataList);
 
-
-        }
-        [TestMethod]
-        public void RemoveNonValidNumericData(ArrayList dataList)
-        {
+            ArrayList goodValues = CheckList(dataList);
            
+            int sum = SumList(goodValues);
 
-            
-            // test to see if it can be converted to an int
-          //  foreach(int data in dataList)
-          for(int i = 0; i<12;i++)
+            Assert.AreEqual(147, sum);
+        }
+        public ArrayList CheckList(ArrayList list)
+        {
+            ArrayList goodVals = new ArrayList();
+
+            foreach(var item in list) // we use var here becasue we have multiple tpyes, strings and ints.
             {
-                // create an array to hold the integers then add them to an arrayList
-                int[] intArray = new int[12];
-                ArrayList intList = new ArrayList();
-
-                // populate the array from the list
-              
-
-            
-
-/*              //  int number;
-                if (typeof(int) == intArray[i].GetType)
+                int aValue;
+                // here we get the item or element and convert it to a string first then see if it can be converted to an int. And if it can be it will return true.
+                if(int.TryParse(Convert.ToString(item), out aValue) == true)
                 {
-                    // if its an int create a new arrayList
-                    intList.Add(data);
-                    Console.Write("intList: {0}", data);
+                    // it can be converted to an int so add it to a new list.
+                    goodVals.Add(aValue);   // pass in aValue which is the integer that has been made from the string
                 }
-                */
-
-
-            //    bool intSuccess = int.TryParse(data, out number);
-
             }
+            return goodVals;
+        }
 
-
-            // test to see if it can be converted to a float
-
-            // test to see if it can be converted to a double
-
-            // test to see if it can be converted to a decimal
-
+        public int SumList(ArrayList list)
+        {
+            int sum = 0;
+            foreach(int item in list)
+            {
+                sum += item;
+            }
+            return sum;
         }
     }
 }
