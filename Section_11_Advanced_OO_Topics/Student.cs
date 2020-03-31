@@ -21,11 +21,25 @@ namespace Section_11_Advanced_OO_Topics
             major = maj;
             studentId = sId;
         }
+
+
+        public override string ExerciseHabits()
+        {
+            return "5 miles a day";
+        }
+
+        public void GetDob()
+        {
+            // in order to access protected members (variables in the base class of type protected we use the keyword base
+            base.dateOfBirth
+
+
+        }
+
+
+
+
     }
 
-    public override ExerciseHabits()  
-    {
-        return "5 miles a day"
-    }
 
 }

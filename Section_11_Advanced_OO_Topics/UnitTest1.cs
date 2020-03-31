@@ -9,6 +9,7 @@ namespace Section_11_Advanced_OO_Topics
      * Lesson 127 Abstract classes
      * Lesson 128 Abstract methods
      * Lesson 129 composition
+     * Lesson 130 Protected keyword
      * 
      */
     [TestClass]
@@ -28,7 +29,16 @@ namespace Section_11_Advanced_OO_Topics
             // in order to use an object in a class we have to instantiate the object and pass in that instantiation.
             DateTime dob = new DateTime(2002, 01, 22);
             Student stu = new Student("1264", "suoking", "changMai", 16, "Politics", "69", dob)
-
         }
+
+        [TestMethod]
+        public void Protected_Keyword_Test()
+        {
+            // in order to use an object in a class we have to instantiate the object and pass in that instantiation.
+            DateTime dob = new DateTime(2002, 01, 22);
+            Student stu = new Student("1264", "suoking", "changMai", 16, "Politics", "69", dob)
+        }
+
+
     }
 }

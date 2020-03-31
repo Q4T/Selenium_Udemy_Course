@@ -17,7 +17,7 @@ namespace Section_11_Advanced_OO_Topics   // public vars can be seen in this nam
         private string lastName;        // these are known as members
         private string firstName;       // these are known as members
         private int age;                // these are known as members
-        private DateTime dateOfBirth;    // members can also be objects like DateTime
+        protected DateTime dateOfBirth;    // members can also be objects like DateTime
 
         public Person()  // public vars can be seen in this namespace
         {
