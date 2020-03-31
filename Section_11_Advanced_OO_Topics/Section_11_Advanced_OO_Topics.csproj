@@ -49,10 +49,15 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lecture.cs" />
+    <Compile Include="Musical.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="Play.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="Ticket.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TicketsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

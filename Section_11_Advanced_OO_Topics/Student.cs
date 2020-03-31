@@ -16,7 +16,7 @@ namespace Section_11_Advanced_OO_Topics
         private string studentId;
 
         public Student(string id, string lName, string fName, int anAge, string maj, string sId, DateTime dob)
-            :base(id,lName,fName,anAge,dob)   // we use :base() to passs in the caribles to the base class 
+            :base(id,lName,fName,anAge,dob)   // we use :base() to passs in the members to the base class 
         {
             major = maj;
             studentId = sId;
@@ -28,12 +28,10 @@ namespace Section_11_Advanced_OO_Topics
             return "5 miles a day";
         }
 
-        public void GetDob()
+        public DateTime GetDob()
         {
             // in order to access protected members (variables in the base class of type protected we use the keyword base
-            base.dateOfBirth
-
-
+            return base.dateOfBirth;
         }
 
 
