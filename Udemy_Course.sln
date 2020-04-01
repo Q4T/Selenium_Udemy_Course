@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section_10_Quiz", "Section_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_11_Advanced_OO_Topics", "Section_11_Advanced_OO_Topics\Section_11_Advanced_OO_Topics.csproj", "{3BBC80BA-622A-46D2-800C-9DB29AE91711}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_11_End_Of_Section_Exam", "Section_11_End_Of_Section_Exam\Section_11_End_Of_Section_Exam.csproj", "{EBBCE91E-C375-40E0-A15D-021371EA1055}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{3BBC80BA-622A-46D2-800C-9DB29AE91711}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BBC80BA-622A-46D2-800C-9DB29AE91711}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BBC80BA-622A-46D2-800C-9DB29AE91711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBBCE91E-C375-40E0-A15D-021371EA1055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBBCE91E-C375-40E0-A15D-021371EA1055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBBCE91E-C375-40E0-A15D-021371EA1055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBBCE91E-C375-40E0-A15D-021371EA1055}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
