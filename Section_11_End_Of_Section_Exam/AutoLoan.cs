@@ -57,8 +57,6 @@ namespace Section_11_End_Of_Section_Exam
             decimal LoanAmountPlusFees = (base.LoanAmount + adminFee);
             decimal InterestPayments = InterestRate / (48 * LoanAmountPlusFees);     // we can reference InterestRate accessor from the base class as this is a derived class !!
 
-
-
             return InterestPayments;
             // int months = base.numOfPaymentsInMonths();
             // return (base.InterestRate / base.numOfPaymentsInMonths()) * (base.LoanAmount + adminFee);
