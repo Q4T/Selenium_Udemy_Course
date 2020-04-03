@@ -4,19 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Section_11_Advanced_OO_Topics
+namespace Section_12_Interfaces
 {
-    /* Lesson 126 inheritence example p2
-    * // lesson 142 Implemeting Interfaces
-    * 
-    */
-    class Student : Person  // this tells us that Student will inherti from Person - like the extends keyword in Java.
+    // lesson 142 Implemeting Interfaces
+
+    class Student : Person
     {
+
         private string major;
         private string studentId;
 
         public Student(string id, string lName, string fName, int anAge, string maj, string sId, DateTime dob)
-            :base(id,lName,fName,anAge,dob)   // we use :base() to passs in the members to the base class 
+            : base(id, lName, fName, anAge, dob)   // we use :base() to passs in the members to the base class 
         {
             major = maj;
             studentId = sId;
@@ -34,6 +33,4 @@ namespace Section_11_Advanced_OO_Topics
             return base.dateOfBirth;
         }
     }
-
-
 }
