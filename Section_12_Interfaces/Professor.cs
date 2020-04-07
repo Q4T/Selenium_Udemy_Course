@@ -59,11 +59,19 @@ namespace Section_12_Interfaces
             return "Work";
         }
 
-        public string getStartLocation()
+        public string GetStartLocation()
         {
-            return "proffessor Home";
+            return "Staff Room";
         }
 
+        public override string ToString()
+        {
+            return base.ToString() +
+                "\nMiles: " + DetermineMiles() +
+                "\nDestination: " + GetDestination() +
+                "\nStarting from: " + GetStartLocation()+
+                "\n";
+        }
 
     }
 }

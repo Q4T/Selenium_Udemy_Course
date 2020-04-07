@@ -37,7 +37,7 @@ namespace Section_12_Interfaces
             return "School";
         }
 
-        public string getStartLocation()
+        public string GetStartLocation()
         {
             return "Home";
         }
@@ -48,6 +48,14 @@ namespace Section_12_Interfaces
             return base.dateOfBirth;
         }
 
+        public override string ToString()
+        {
+            return base.ToString() +
+                "\nMiles: " + DetermineMiles() +
+                "\nDestination: " + GetDestination() +
+                "\nStarting from: " + GetStartLocation()+
+                "\n";
+        }
 
     }
 }

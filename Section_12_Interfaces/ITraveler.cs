@@ -12,7 +12,7 @@ namespace Section_12_Interfaces
     {
         string GetDestination();
         
-        string getStartLocation();
+        string GetStartLocation();
 
         double DetermineMiles();
     }

@@ -32,5 +32,11 @@ namespace Section_12_Interfaces
         }
 
         public abstract string ExerciseHabits();   // abstract method
+
+        public override string ToString()
+        {
+            return "Last name: " + lastName +
+                "\nFirst Name: " + firstName;
+        }
     }
 }
