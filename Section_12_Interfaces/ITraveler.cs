@@ -14,6 +14,6 @@ namespace Section_12_Interfaces
         
         string getStartLocation();
 
-        string DeterrminMiles();
+        double DetermineMiles();
     }
 }

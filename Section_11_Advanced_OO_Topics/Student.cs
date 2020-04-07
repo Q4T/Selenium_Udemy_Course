@@ -22,7 +22,6 @@ namespace Section_11_Advanced_OO_Topics
             studentId = sId;
         }
 
-
         public override string ExerciseHabits()
         {
             return "5 miles a day";

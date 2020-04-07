@@ -8,7 +8,7 @@ namespace Section_12_Interfaces
 {
     // lesson 142 Implemeting Interfaces
 
-    class Student : Person
+    class Student : Person, ITraveler
     {
 
         private string major;
@@ -17,8 +17,8 @@ namespace Section_12_Interfaces
         public Student(string id, string lName, string fName, int anAge, string maj, string sId, DateTime dob)
             : base(id, lName, fName, anAge, dob)   // we use :base() to passs in the members to the base class 
         {
-            major = maj;
-            studentId = sId;
+            major = maj;    // should be setting to public properties accossors but was lazy.
+            studentId = sId;   // should be setting to public properties accossors but was lazy.
         }
 
 
@@ -27,10 +27,27 @@ namespace Section_12_Interfaces
             return "5 miles a day";
         }
 
+        public double DetermineMiles()
+        {
+            return 75.0;
+        }
+
+        public string GetDestination()
+        {
+            return "School";
+        }
+
+        public string getStartLocation()
+        {
+            return "Home";
+        }
+
         public DateTime GetDob()
         {
             // in order to access protected members (variables in the base class of type protected we use the keyword base
             return base.dateOfBirth;
         }
+
+
     }
 }
