@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_13_Exception_Handel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_13_End_Of_Section_Exam", "Section_13_End_Of_Section_Exam\Section_13_End_Of_Section_Exam.csproj", "{8A59D987-D43F-4A5F-A6BE-5F240D2B48C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_14_Advanced_CSharp_Topics", "Section_14_Advanced_CSharp_Topics\Section_14_Advanced_CSharp_Topics.csproj", "{C6709692-CA02-4A47-8639-1DE63148DDC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{8A59D987-D43F-4A5F-A6BE-5F240D2B48C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A59D987-D43F-4A5F-A6BE-5F240D2B48C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A59D987-D43F-4A5F-A6BE-5F240D2B48C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6709692-CA02-4A47-8639-1DE63148DDC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6709692-CA02-4A47-8639-1DE63148DDC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6709692-CA02-4A47-8639-1DE63148DDC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6709692-CA02-4A47-8639-1DE63148DDC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
