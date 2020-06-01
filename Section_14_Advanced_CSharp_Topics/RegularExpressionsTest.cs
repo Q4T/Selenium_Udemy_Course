@@ -37,7 +37,7 @@ namespace Section_14_Advanced_CSharp_Topics
 
         }
 
-        public static bool IsEmail(string email,string pattern)
+        public static bool IsEmail(string email,string pattern) 
         {
             if(email != null)
             {
