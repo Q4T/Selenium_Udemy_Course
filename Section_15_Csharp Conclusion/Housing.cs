@@ -11,7 +11,53 @@ namespace Section_15_Csharp_Conclusion
         private string address;
         private string typeOfConstruction;
         private string yearBuilt;
-    
+
+        //constructor
+        public Housing(string theAddress, string typeOfConstr, string yrBuilt)
+        {
+
+
+        }
+
+
+        // setters and getters - accessors
+        public string Address
+        {
+            get
+            {
+                return address;
+            }
+            set
+            {
+                address = value;
+            }
+        }
+
+        public string TypeOfConstruction 
+        { 
+            get 
+            {
+                return typeOfConstruction; 
+            }
+            set
+            {
+                typeOfConstruction = value;
+            }
+        }
+       
+        public string YearBuilt
+        {
+            get
+            {
+                return yearBuilt;
+            }
+            set
+            {
+                yearBuilt = value;
+            }
+        }
+
+
     public virtual decimal ProjectedRentalAmt()
         {
             return 0;

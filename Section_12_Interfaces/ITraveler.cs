@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Section_12_Interfaces
 {
-    // lesson 142 Implemeting Interfaces
+    // lesson 142 Implementing Interfaces
 
     interface ITraveler
     {
