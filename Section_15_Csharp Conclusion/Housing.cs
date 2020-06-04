@@ -15,8 +15,9 @@ namespace Section_15_Csharp_Conclusion
         //constructor
         public Housing(string theAddress, string typeOfConstr, string yrBuilt)
         {
-
-
+            Address = address;
+            TypeOfConstruction = typeOfConstruction;
+            YearBuilt = yearBuilt;
         }
 
 

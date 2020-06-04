@@ -52,6 +52,7 @@
     <Compile Include="Housing.cs" />
     <Compile Include="IUnits.cs" />
     <Compile Include="MultiUnit.cs" />
+    <Compile Include="SingleFamily.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
