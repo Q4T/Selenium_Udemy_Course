@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_14_Advanced_CSharp_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_15_Csharp Conclusion", "Section_15_Csharp Conclusion\Section_15_Csharp Conclusion.csproj", "{07F354F1-2E58-4514-8E94-A7257EC98DF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_15_Inheritance_Exam", "Section_15_Inheritance_Exam\Section_15_Inheritance_Exam.csproj", "{FE8B61C6-BDD9-4D72-A45D-CB5BF9A85EB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{07F354F1-2E58-4514-8E94-A7257EC98DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07F354F1-2E58-4514-8E94-A7257EC98DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07F354F1-2E58-4514-8E94-A7257EC98DF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8B61C6-BDD9-4D72-A45D-CB5BF9A85EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8B61C6-BDD9-4D72-A45D-CB5BF9A85EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8B61C6-BDD9-4D72-A45D-CB5BF9A85EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8B61C6-BDD9-4D72-A45D-CB5BF9A85EB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
