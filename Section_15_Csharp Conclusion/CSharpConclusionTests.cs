@@ -29,7 +29,8 @@ namespace Section_15_Csharp_Conclusion
 
             foreach(var item in sFam)
             {
-                Console.WriteLine(item.ToString());
+               // Console.WriteLine(item.ToString());    // don't need to add ToString, just the object name will print eh to string
+                Console.WriteLine(item);
                 Console.WriteLine(" ");
                 
             }
@@ -55,7 +56,7 @@ namespace Section_15_Csharp_Conclusion
 
             foreach(var item in mUnitLst)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine(item);
                 Console.WriteLine(" ");
             }
         }

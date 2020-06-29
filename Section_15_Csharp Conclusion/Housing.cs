@@ -15,7 +15,7 @@ namespace Section_15_Csharp_Conclusion
         //constructor
         public Housing(string theAddress, string typeOfConstr, string yrBuilt)
         {
-            Address = theAddress;
+            Address = theAddress;     // should I be assigning the accessors to the passed in variables or should I assign the vars to the local vars instead?
             TypeOfConstruction = typeOfConstr;
             YearBuilt = yrBuilt;
         }
