@@ -6,7 +6,7 @@ namespace Section_10_ArraysAndLists
 {
     /*
      * Lesson 120 List Collections
-     * Generally could not to mix data types in an arrayList as it makes looping through awkward
+     * Generally good not to mix data types in an arrayList as it makes looping through awkward
      * 
      */
     [TestClass]

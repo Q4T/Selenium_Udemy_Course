@@ -15,9 +15,9 @@ namespace Section_15_Csharp_Conclusion
         //constructor
         public Housing(string theAddress, string typeOfConstr, string yrBuilt)
         {
-            Address = address;
-            TypeOfConstruction = typeOfConstruction;
-            YearBuilt = yearBuilt;
+            Address = theAddress;
+            TypeOfConstruction = typeOfConstr;
+            YearBuilt = yrBuilt;
         }
 
 
@@ -64,9 +64,8 @@ namespace Section_15_Csharp_Conclusion
             return 0;
         }
         public override string ToString()
-        {
-            // return base.ToString();
-            return "Address: " + address +
+        {           
+            return"Address: " + address +
             "\nType of Construction: " + typeOfConstruction +
             "\nYear Built: " + yearBuilt + 
             "\nProjected Rental Amount: " + ProjectedRentalAmt().ToString("c"); 

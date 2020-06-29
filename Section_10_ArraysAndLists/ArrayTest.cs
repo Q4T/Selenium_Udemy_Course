@@ -25,7 +25,7 @@ namespace Section_10_ArraysAndLists
         public void ForEachLoop()
         {
             int[] scores =  {3,6,1,77,4,8,9};
-            // for each loop is often used for collections as it already knows the number in the collection
+            // foreach loop is often used for collections as it already knows the number in the collection
             foreach(int counter in scores)
             {
                 Console.WriteLine(counter);

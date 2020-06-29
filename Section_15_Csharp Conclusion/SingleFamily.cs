@@ -78,7 +78,7 @@ namespace Section_15_Csharp_Conclusion
         {
             get
             {
-                return hasPorch
+                return hasPorch;
             }
             set
             {
@@ -106,7 +106,7 @@ namespace Section_15_Csharp_Conclusion
 
         public override string ToString()
         {
-            return "rentAmount: " + rentAmount +
+            return "rentAmount: " + rentAmount.ToString("c") +
             "\nSizeInSqrFt: " + SizeInSqrFt +
             "\nnumOfBedrooms: " + numOfBedrooms +
             "\nnumOfBathrooms: " + numOfBathrooms +

@@ -16,7 +16,8 @@ namespace Section_15_Csharp_Conclusion
             :base(theAddress, typeOfConstr, yrBuilt)
         {
             ComplexName = cmplxName;
-            RentAmountPerUnit = rentAmountPerUnit;
+            RentAmountPerUnit = rentPerUnit;
+            numberOfUnits = numUnits;
         }
 
         // accsessors
@@ -46,20 +47,23 @@ namespace Section_15_Csharp_Conclusion
 
         public int GetNumUnits()
         {
-            return 1;   // placeholder
+            return numberOfUnits;
         }
 
         public override decimal ProjectedRentalAmt()
         {
             // (rent amount per unit * num of units) * 12
-            return base.ProjectedRentalAmt();
+
+            return (RentAmountPerUnit * GetNumUnits()) * 12;
         }
 
         public override string ToString()
         {
             return "ComplexName: " + ComplexName +
             "\nNumber of units: " + GetNumUnits() +
-            "\nrentAmountPerUnit: " + RentAmountPerUnit;
+            "\nrentAmountPerUnit: " + RentAmountPerUnit.ToString("c") +
+            "\nProjected Rental Amount: " + ProjectedRentalAmt().ToString("c") +
+            "\n " + base.ToString();
 
         }
 

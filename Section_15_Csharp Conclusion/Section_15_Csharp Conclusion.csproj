@@ -53,8 +53,9 @@
     <Compile Include="IUnits.cs" />
     <Compile Include="MultiUnit.cs" />
     <Compile Include="SingleFamily.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="CSharpConclusionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTest2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
