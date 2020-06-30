@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Section_15_Inheritance_Exam
 {
-    class BasePage
+    abstract class BasePage
     {
       
         public virtual string pageName()

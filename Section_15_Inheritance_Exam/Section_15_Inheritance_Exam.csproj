@@ -55,7 +55,7 @@
     <Compile Include="SectionOfButtons.cs" />
     <Compile Include="SectionOfRandomStuff.cs" />
     <Compile Include="SectionOfSocialMedia.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Inheritance_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
