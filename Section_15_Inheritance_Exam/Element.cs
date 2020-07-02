@@ -8,6 +8,7 @@ namespace Section_15_Inheritance_Exam
 {
     class Element
     {
+
         public void Click()
         {
             Console.WriteLine("Click");

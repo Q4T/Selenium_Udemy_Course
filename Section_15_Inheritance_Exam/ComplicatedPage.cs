@@ -8,14 +8,14 @@ namespace Section_15_Inheritance_Exam
 {
     class ComplicatedPage : BasePage
     {
-        SectionOfButtons buttonsSection;
-        SectionOfSocialMedia socialMediaSection;
-        SectionOfRandomStuff randonStuffSection;
+        // properties
+        // Using objects as properties is known as composition
+        public SectionOfButtons buttonsSection { get; set; }
+        public SectionOfSocialMedia socialMediaSection { get; set; }
+        public SectionOfRandomStuff randonStuffSection { get; set; }
+        public override string PageName { get => "Complicated Page"; }
 
-        public override string pageName()
-        {
-            return "Complicated Page";
-        }
+
 
 
     }

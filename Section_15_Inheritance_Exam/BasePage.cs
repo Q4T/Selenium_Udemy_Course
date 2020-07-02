@@ -8,15 +8,9 @@ using System.Threading.Tasks;
 
 namespace Section_15_Inheritance_Exam
 {
-    abstract class BasePage
+    public abstract class BasePage
     {
-      
-        public virtual string pageName()
-        {
-            return  "";
-        }
-
-
-
+        public abstract string PageName { get; }    // this is a property
+        // because the class is abstract the property must be abstract as well.
     }
 }

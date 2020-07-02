@@ -8,6 +8,6 @@ namespace Section_15_Inheritance_Exam
 {
     class SectionOfButtons
     {
-        public Element Button;
+        public Element Button { get; set; }
     }
 }
