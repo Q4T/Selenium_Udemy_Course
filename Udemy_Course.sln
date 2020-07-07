@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_15_Csharp Conclusio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_15_Inheritance_Exam", "Section_15_Inheritance_Exam\Section_15_Inheritance_Exam.csproj", "{FE8B61C6-BDD9-4D72-A45D-CB5BF9A85EB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium_WebDriver", "Selenium_WebDriver\Selenium_WebDriver.csproj", "{7090BE63-C302-40C6-9292-76720506A2D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{FE8B61C6-BDD9-4D72-A45D-CB5BF9A85EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE8B61C6-BDD9-4D72-A45D-CB5BF9A85EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE8B61C6-BDD9-4D72-A45D-CB5BF9A85EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7090BE63-C302-40C6-9292-76720506A2D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7090BE63-C302-40C6-9292-76720506A2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7090BE63-C302-40C6-9292-76720506A2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7090BE63-C302-40C6-9292-76720506A2D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
