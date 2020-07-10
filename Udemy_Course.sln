@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_15_Inheritance_Exam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium_WebDriver", "Selenium_WebDriver\Selenium_WebDriver.csproj", "{7090BE63-C302-40C6-9292-76720506A2D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium_ElementInteractions", "ElementInteractions\Selenium_ElementInteractions.csproj", "{F6098679-27D7-4735-A8E3-F5943F36696F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{7090BE63-C302-40C6-9292-76720506A2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7090BE63-C302-40C6-9292-76720506A2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7090BE63-C302-40C6-9292-76720506A2D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6098679-27D7-4735-A8E3-F5943F36696F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6098679-27D7-4735-A8E3-F5943F36696F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6098679-27D7-4735-A8E3-F5943F36696F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6098679-27D7-4735-A8E3-F5943F36696F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
