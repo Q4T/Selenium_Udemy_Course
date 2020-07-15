@@ -32,18 +32,21 @@ namespace ElementInteractions
             driver.FindElement(By.XPath("//input[@type='radio'][@value='male']")).Click();
 
             //select one checkbox
+            // <input type="checkbox" name="vehicle" value="Bike">
+            driver.FindElement(By.XPath("//*[@type='checkbox'][@value='Bike']")).Click();
 
             //select Audi from the dropdown
-
+            driver.FindElement(By.TagName("select")).Click();
+            driver.FindElement(By.XPath("//*[@value='audi']")).Click();
 
             //open Tab2 and assert that it is opened. Hint, use .Text property when you find the element
+            driver.FindElement(By.XPath("//*[contains(text(),'Tab 2')]")).Click();
 
-            //in the HTML Table with id, highlight one of the salary cells
-
-            //Highlight the center section called "Highlight me", but you can only
-            //highlight the highest level div for that element. The top parent div.
-            //Hint, this is the class - 
-            //et_pb_column et_pb_column_1_3  et_pb_column_10 et_pb_css_mix_blend_mode_passthrough
+            Assert.AreEqual("Tab 2 content", driver.FindElement(By.XPath("//*[contains(text(),'Tab 2 content')]")).Text);
+      
+       
+            //Navigation:
+            driver.Navigate().
 
 
 
