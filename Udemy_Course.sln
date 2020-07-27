@@ -45,7 +45,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section_15_Inheritance_Exam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium_WebDriver", "Selenium_WebDriver\Selenium_WebDriver.csproj", "{7090BE63-C302-40C6-9292-76720506A2D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium_ElementInteractions", "ElementInteractions\Selenium_ElementInteractions.csproj", "{F6098679-27D7-4735-A8E3-F5943F36696F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementInteractions", "ElementInteractions\ElementInteractions.csproj", "{F6098679-27D7-4735-A8E3-F5943F36696F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

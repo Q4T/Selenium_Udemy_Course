@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
-using System;
+//using System;
 using System.IO;
 using System.Reflection;
 
@@ -43,14 +43,7 @@ namespace ElementInteractions
             driver.FindElement(By.XPath("//*[contains(text(),'Tab 2')]")).Click();
 
             Assert.AreEqual("Tab 2 content", driver.FindElement(By.XPath("//*[contains(text(),'Tab 2 content')]")).Text);
-      
-       
-            //Navigation:
-            driver.Navigate().
-
-
-
-
+     
         }
 
 
