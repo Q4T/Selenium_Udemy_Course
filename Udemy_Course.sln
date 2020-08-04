@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementInteractions", "Elem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExplicitWaits", "ExplicitWaits\ExplicitWaits.csproj", "{705641AA-57C9-40A1-BE52-839110F0D008}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User_Interactions_Mouse_DragNDrop", "User_Interactions_Mouse_DragNDrop\User_Interactions_Mouse_DragNDrop.csproj", "{2E039444-CF9F-426F-BC54-1396BCA9B1CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{705641AA-57C9-40A1-BE52-839110F0D008}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{705641AA-57C9-40A1-BE52-839110F0D008}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{705641AA-57C9-40A1-BE52-839110F0D008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E039444-CF9F-426F-BC54-1396BCA9B1CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E039444-CF9F-426F-BC54-1396BCA9B1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E039444-CF9F-426F-BC54-1396BCA9B1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E039444-CF9F-426F-BC54-1396BCA9B1CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
