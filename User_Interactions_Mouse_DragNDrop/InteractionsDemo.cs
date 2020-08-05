@@ -1,9 +1,10 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NUnit.Framework;
+using NUnit.Framework;  // using nUnit not MS test framework
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
+using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 
 namespace User_Interactions_Mouse_DragNDrop
 {
@@ -11,22 +12,91 @@ namespace User_Interactions_Mouse_DragNDrop
     // installed nUmit for this via NuGet packages
     // Use https://jqueryui.com/droppable/   to test drag and drop
 
-
-
-
     [TestFixture]
     public class InteractionsDemo
     {
-       [Test]
-        public void Example1()
+
+        private Actions _actions;
+        private ChromeDriver _driver;
+        private WebDriverWait _wait;
+   
+
+        [SetUp]
+        public void SetUp()
         {
-            var driver = new ChromeDriver();
-            var actions = new Actions(driver);
+            _driver = new ChromeDriver();
+            _actions = new Actions(_driver);
+            _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
+        }
 
-            var dropToElement = driver.FindElement(By.Id("droppable"));
-            var dragElement = driver.FindElement(By.Id("draggable"));
+        [TearDown]
+        public void TearDown()
+        {
+            _driver.Close();
+            _driver.Quit();
 
-            driver.Navigate().GoToUrl("https://jqueryui.com/droppable/");        
+        }
+
+        [Test]
+        public void DragAndDropExample1()
+        {
+
+            _driver.Navigate().GoToUrl("https://jqueryui.com/droppable/");
+            _driver.Manage().Window.Maximize();
+
+            _wait.Until(ExpectedConditions.FrameToBeAvailableAndSwitchToIt(By.ClassName("demo-frame")));
+
+            IWebElement targetElement = _driver.FindElement(By.Id("droppable"));
+            IWebElement sourceElement = _driver.FindElement(By.Id("draggable"));
+
+            _actions.DragAndDrop(sourceElement, targetElement).Perform();
+
+              Assert.AreEqual("Dropped!", targetElement.Text);
+
+            // We can also build an action and perform it later like this
+            //        var DragNDropAction = actions.DragAndDrop(sourceElement, targetElement).Build();
+            //        DragNDropAction.Perform();
+        }
+
+        [Test]
+        public void DragAndDropExample2()
+        {
+            _driver.Navigate().GoToUrl("https://jqueryui.com/droppable/");
+            _driver.Manage().Window.Maximize();
+
+            _wait.Until(ExpectedConditions.FrameToBeAvailableAndSwitchToIt(By.ClassName("demo-frame")));
+
+            IWebElement targetElement = _driver.FindElement(By.Id("droppable"));
+            IWebElement sourceElement = _driver.FindElement(By.Id("draggable"));
+
+            var drag = _actions
+                .ClickAndHold(sourceElement)
+                .MoveToElement(targetElement)
+                .Release(targetElement)
+                .Build();
+
+            drag.Perform();
+            Assert.AreEqual("Dropped!", targetElement.Text);
+
+        }
+        [Test]
+        public void DragAndDropQuiz()
+        {
+
+            _driver.Navigate().GoToUrl("http://www.pureexample.com/jquery-ui/basic-droppable.html");
+            _driver.Manage().Window.Maximize();
+            _wait.Until(ExpectedConditions.FrameToBeAvailableAndSwitchToIt(By.Id("ExampleFrame-94")));
+
+            var targetElement = _driver.FindElement(By.XPath("//div[@class='squaredotted ui-droppable']"));
+            var sourceElement = _driver.FindElement(By.XPath("//div[@class='square ui-draggable']"));
+            var message = _driver.FindElement(By.Id("info"));   // could have added .Text to the end of this aswell and just asserted on message
+
+            _actions.DragAndDrop(sourceElement, targetElement).Perform();
+            _wait.Until(ExpectedConditions.ElementIsVisible(By.Id("info")));
+            Assert.AreEqual("dropped!", message.Text);
+
+        }
+
 
     }
 }
