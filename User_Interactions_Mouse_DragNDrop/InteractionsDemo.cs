@@ -94,8 +94,42 @@ namespace User_Interactions_Mouse_DragNDrop
             _actions.DragAndDrop(sourceElement, targetElement).Perform();
             _wait.Until(ExpectedConditions.ElementIsVisible(By.Id("info")));
             Assert.AreEqual("dropped!", message.Text);
-
         }
+
+        [Test]
+        public void ResizingExample()
+        {
+
+            _driver.Navigate().GoToUrl("https://jqueryui.com/resizable/");
+            _driver.Manage().Window.Maximize();
+            _wait.Until(ExpectedConditions.FrameToBeAvailableAndSwitchToIt(By.ClassName("demo-frame")));
+
+            IWebElement resizeHandle = _driver.FindElement(By.XPath("//div[@class='ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se']"));
+            _actions.ClickAndHold(resizeHandle).MoveByOffset(100, 100).Perform();
+            Assert.IsTrue(_driver.FindElement(By.XPath("//div[@id='resizable' and @style]")).Displayed);
+        }
+
+        [Test]
+
+        public void KeysExample()
+        {
+            _driver.Navigate().GoToUrl("http://google.com");
+            _driver.Manage().Window.Maximize();
+
+            var searchBar = _driver.FindElement(By.Name("q"));
+            searchBar.Click();
+            var searchBttn = _driver.FindElement(By.Name("btnK"));
+
+            _actions.SendKeys("Hello").Perform();
+            searchBttn.Click();
+
+            _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='LC20lb MMgsKf']")));
+
+            var linkAdel = _driver.FindElement(By.XPath("//*[@class='LC20lb MMgsKf']"));
+            Assert.IsTrue((linkAdel).Displayed);
+        }
+
+
 
 
     }
