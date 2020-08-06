@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using NUnit.Framework;  // using nUnit not MS test framework
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -129,7 +130,34 @@ namespace User_Interactions_Mouse_DragNDrop
             Assert.IsTrue((linkAdel).Displayed);
         }
 
+        [Test]
 
+        public void DragNDropQuiz()  // HTML5 HTML 5 drag and drop
+        {
+            // HTML drag and drop is not suported in Selenium so we have to use a js helper 
+            // located at: https://gist.github.com/rcorreia/2362544
+            // named  drag_and_drop_helper
+
+            _driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/drag_and_drop");
+         //   _driver.Manage().Window.Maximize();
+
+            var source = _driver.FindElement(By.Id("column-a"));
+            var target = _driver.FindElement(By.Id("column-b"));
+
+         //   _wait.Until(ExpectedConditions.ElementToBeClickable(source));
+            _wait.Until(ExpectedConditions.ElementIsVisible(By.Id("column-a")));
+
+            var jsFile = File.ReadAllText(@"C:\Users\Gareth\source\repos\Selenium_Udemy_Course\drag_and_drop_helper.js");
+            IJavaScriptExecutor js = _driver as IJavaScriptExecutor;
+            // exe javascript
+            js.ExecuteScript(jsFile + "$('#column-a').simulateDragDrop({dropTarget:'#column-b'});");
+
+            Assert.AreEqual("A", target.Text);
+
+        }
+
+
+       
 
 
     }
