@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjects", "PageObjects\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDPractice", "TDDPractice\TDDPractice.csproj", "{D55672C2-635F-45B0-ACD7-C16CACC1ED06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleFramework1", "SampleFramework1\SampleFramework1.csproj", "{C44E5E03-94A0-4ADF-B484-2BB9590BDB69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{D55672C2-635F-45B0-ACD7-C16CACC1ED06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D55672C2-635F-45B0-ACD7-C16CACC1ED06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D55672C2-635F-45B0-ACD7-C16CACC1ED06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C44E5E03-94A0-4ADF-B484-2BB9590BDB69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C44E5E03-94A0-4ADF-B484-2BB9590BDB69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C44E5E03-94A0-4ADF-B484-2BB9590BDB69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C44E5E03-94A0-4ADF-B484-2BB9590BDB69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

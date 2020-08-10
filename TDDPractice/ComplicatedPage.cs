@@ -18,15 +18,15 @@ namespace TDDPractice
             Driver.Navigate().GoToUrl("https://ultimateqa.com/complicated-page");
             Driver.Manage().Window.Maximize();
         }
-/*
-        internal void SearchUsingTopNav(string testToSearch)     // this should probably go into a topNav page but doing an example
-        {
-            var topNavSearchIcon = Driver.FindElement(By.Id("et_search_icon"));
+
+//        internal void SearchUsingTopNav(string testToSearch)     // this should probably go into a topNav page but doing an example
+ //       {
+ //           var topNavSearchIcon = Driver.FindElement(By.Id("et_search_icon"));
            
-            topNavSearchIcon.Click();
-            var searchBar = Driver.FindElement(By.ClassName("search-field jetpack-instant-search__box-input"));
-            searchBar.SendKeys(testToSearch);
-            */
-        }
+ //           topNavSearchIcon.Click();
+ //           var searchBar = Driver.FindElement(By.ClassName("search-field jetpack-instant-search__box-input"));
+ //           searchBar.SendKeys(testToSearch);
+ 
+ //       }
     }
 }
