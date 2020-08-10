@@ -7,7 +7,7 @@ using OpenQA.Selenium.Chrome;
 namespace TDDPractice
 {
     [TestClass]
-    public class TDDPracticeClass
+    public class ComplicatedPageTests
     {
         [TestMethod]
         public void TestMethod1()
@@ -16,7 +16,7 @@ namespace TDDPractice
             var driver = new ChromeDriver(path);
             var complicatedPage = new ComplicatedPage(driver);
             complicatedPage.Open();
-            complicatedPage.SearchUsingTopNav("page object");
+         //   complicatedPage.SearchUsingTopNav("page object");
         }
     }
 }
