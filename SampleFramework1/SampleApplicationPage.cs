@@ -25,19 +25,13 @@ namespace SampleFramework1
        
         public IWebElement lastNameField => Driver.FindElement(By.Name("lastname"));
 
-        internal void SelectMaleRadioButton()
-        {
-            var maleRadioBttn = Driver.FindElement(By.XPath("//*[@value='male']"));
-            maleRadioBttn.Click();
-        }
+        public IWebElement MaleRadioButton => Driver.FindElement(By.XPath("//*[@value='male']"));
 
-        internal void SelectFemailRadioButton()
-        {
-            var maleRadioBttn = Driver.FindElement(By.XPath("//*[@value='female']"));
-            maleRadioBttn.Click();
-        }
+        public IWebElement FemaleRadioButton => Driver.FindElement(By.XPath("//*[@value='female']"));
 
-        private string PageTitle => "Sample Application Lifecycle – Sprint 3";
+        public IWebElement OtherRadioButton => Driver.FindElement(By.XPath("//*[@value='other']"));
+
+        private string PageTitle => "Sample Application Lifecycle - Sprint 3 - Ultimate QA";
 
         internal void GoTo()
         {
@@ -47,19 +41,31 @@ namespace SampleFramework1
             $"Actual = {Driver.Title}");
         }
 
-        //internal object FillOutFormAndSubmit(string v)    this is generated automatically when we CTRL dot on 
-        //                                                  sampleApplicationPage in the SampleApplicationOne class
-        //                                                  We need to set the return TYPE to ultimateQAHomePage which is a new page we want to create 
-
-     //   public ultimateQAHomePage FillOutFormAndSubmit(string firstName, string lastName)
         public ultimateQAHomePage FillOutFormAndSubmit(TestUser user)
         {
+            SelectGender(user);
             firstNameField.SendKeys(user.firstName);
             lastNameField.SendKeys(user.lastName);
             submitButton.Submit();
             return new ultimateQAHomePage(Driver);
         }
 
-
+        private void SelectGender(TestUser user)
+        {
+            switch (user.GenderType)
+            {
+                case Gender.Male:
+                    MaleRadioButton.Click();
+                    break;
+                case Gender.Female:
+                    FemaleRadioButton.Click();
+                    break;
+                case Gender.Other:
+                    OtherRadioButton.Click();
+                    break;
+                default:
+                    break;
+            }
+        }
     } 
 }

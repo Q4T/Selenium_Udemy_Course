@@ -16,21 +16,35 @@ namespace SampleFramework1
         public TestUser TheTestUser { get; private set; }
 
         [TestMethod]
+        [Description("User can fill out form")]
         public void Test1()
         {
             var sampleApplicationPage = new SampleApplicationPage(Driver);
-            sampleApplicationPage.GoTo(); // has an assertion in th goto method
-            sampleApplicationPage.SelectMaleRadioButton();
-             var ultimateQAHomePage = sampleApplicationPage.FillOutFormAndSubmit(TheTestUser);            
+            sampleApplicationPage.GoTo(); // has an assertion in the goto method 
+            TheTestUser.GenderType = Gender.Female;
+            var ultimateQAHomePage = sampleApplicationPage.FillOutFormAndSubmit(TheTestUser);            
             Assert.IsTrue(ultimateQAHomePage.IsVisible, "UltimateQA page was not visible");
         }
        
         [TestMethod]
+        [Description("User can fill out form again")]
         public void PretendTest2()
         {
             var sampleApplicationPage = new SampleApplicationPage(Driver);
             sampleApplicationPage.GoTo();
-            sampleApplicationPage.SelectFemailRadioButton();
+            TheTestUser.GenderType = Gender.Male;
+            var ultimateQAHomePage = sampleApplicationPage.FillOutFormAndSubmit(TheTestUser);
+            Assert.IsTrue(ultimateQAHomePage.IsVisible, "UltimateQA page was not visible");
+        }
+
+        [TestMethod]
+        [Description("Other Gender can fill out form again")]
+        public void OtherGenderTest()
+        {
+            
+            var sampleApplicationPage = new SampleApplicationPage(Driver);
+            sampleApplicationPage.GoTo();
+            TheTestUser.GenderType = Gender.Other;
             var ultimateQAHomePage = sampleApplicationPage.FillOutFormAndSubmit(TheTestUser);
             Assert.IsTrue(ultimateQAHomePage.IsVisible, "UltimateQA page was not visible");
         }

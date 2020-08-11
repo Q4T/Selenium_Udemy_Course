@@ -4,5 +4,6 @@
     {
         public string firstName { get; set; }
         public string lastName { get; set; }
+        public Gender GenderType { get; set; }
     }
 }
