@@ -1,4 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 
 namespace SampleFramework1
@@ -12,19 +14,37 @@ namespace SampleFramework1
         { 
             get
             {
-                return Driver.Title.Contains("Sample Application Lifecycle - Sprint 2 - Ultimate QA");
+                return Driver.Title.Contains(PageTitle);
             }
             set { }
         }
 
         public IWebElement firstNameField => Driver.FindElement(By.Name("firstname"));
+       
         public IWebElement submitButton => Driver.FindElement(By.XPath("//*[@class='entry-content']/form/input[3]"));
-
+       
         public IWebElement lastNameField => Driver.FindElement(By.Name("lastname"));
+
+        internal void SelectMaleRadioButton()
+        {
+            var maleRadioBttn = Driver.FindElement(By.XPath("//*[@value='male']"));
+            maleRadioBttn.Click();
+        }
+
+        internal void SelectFemailRadioButton()
+        {
+            var maleRadioBttn = Driver.FindElement(By.XPath("//*[@value='female']"));
+            maleRadioBttn.Click();
+        }
+
+        private string PageTitle => "Sample Application Lifecycle – Sprint 3";
 
         internal void GoTo()
         {
-            Driver.Navigate().GoToUrl("https://ultimateqa.com/sample-application-lifecycle-sprint-2/"); 
+            Driver.Navigate().GoToUrl("https://ultimateqa.com/sample-application-lifecycle-sprint-3/");
+            //Assert.IsTrue(IsVisible, "Sample application page not visible");
+            Assert.IsTrue(IsVisible, $"Sample application page not visible. Expected = {PageTitle}. " + 
+            $"Actual = {Driver.Title}");
         }
 
         //internal object FillOutFormAndSubmit(string v)    this is generated automatically when we CTRL dot on 

@@ -4,6 +4,7 @@ using System.Reflection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 
 namespace SampleFramework1
 {
@@ -11,7 +12,6 @@ namespace SampleFramework1
     [TestCategory("TestApplicationOne")]
     public class SampleApplicationOneTests
     {
-        //        private IWebElement driver;   we need to make this a property rather than a field
         private IWebDriver Driver { get; set; }     // CTRL click on driver on this line to let the IDE change it to Driver wioth a capital D as it is a property not a field. 
         public TestUser TheTestUser { get; private set; }
 
@@ -19,10 +19,9 @@ namespace SampleFramework1
         public void Test1()
         {
             var sampleApplicationPage = new SampleApplicationPage(Driver);
-            sampleApplicationPage.GoTo();
-            Assert.IsTrue(sampleApplicationPage.IsVisible, "Sample application page not visible");
-
-            var ultimateQAHomePage = sampleApplicationPage.FillOutFormAndSubmit(TheTestUser);
+            sampleApplicationPage.GoTo(); // has an assertion in th goto method
+            sampleApplicationPage.SelectMaleRadioButton();
+             var ultimateQAHomePage = sampleApplicationPage.FillOutFormAndSubmit(TheTestUser);            
             Assert.IsTrue(ultimateQAHomePage.IsVisible, "UltimateQA page was not visible");
         }
        
@@ -31,8 +30,7 @@ namespace SampleFramework1
         {
             var sampleApplicationPage = new SampleApplicationPage(Driver);
             sampleApplicationPage.GoTo();
-            Assert.IsTrue(sampleApplicationPage.IsVisible, "Sample application page not visible");
-
+            sampleApplicationPage.SelectFemailRadioButton();
             var ultimateQAHomePage = sampleApplicationPage.FillOutFormAndSubmit(TheTestUser);
             Assert.IsTrue(ultimateQAHomePage.IsVisible, "UltimateQA page was not visible");
         }
@@ -44,14 +42,14 @@ namespace SampleFramework1
         }
 
         [TestCleanup]
-        private void CleanUpAfterTest()
+        public void CleanUpAfterTest()
         {
             Driver.Close();
             Driver.Quit();
         }
 
         [TestInitialize]
-        private void SetUpDriverForEachTest()
+        public void SetUpDriverForEachTest()
         {
             Driver = GetChromeDriver();
             TheTestUser = new TestUser();
