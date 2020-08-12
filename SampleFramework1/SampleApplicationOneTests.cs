@@ -13,40 +13,41 @@ namespace SampleFramework1
     public class SampleApplicationOneTests
     {
         private IWebDriver Driver { get; set; }     // CTRL click on driver on this line to let the IDE change it to Driver wioth a capital D as it is a property not a field. 
+      
+        internal SampleApplicationPage SampleAppPage { get; private set; }
+      
         public TestUser TheTestUser { get; private set; }
 
         [TestMethod]
         [Description("User can fill out form")]
         public void Test1()
         {
-            var sampleApplicationPage = new SampleApplicationPage(Driver);
-            sampleApplicationPage.GoTo(); // has an assertion in the goto method 
+            SampleAppPage.GoTo(); // has an assertion in the goto method 
             TheTestUser.GenderType = Gender.Female;
-            var ultimateQAHomePage = sampleApplicationPage.FillOutFormAndSubmit(TheTestUser);            
-            Assert.IsTrue(ultimateQAHomePage.IsVisible, "UltimateQA page was not visible");
+            var ultimateQAHomePage = SampleAppPage.FillOutFormAndSubmit(TheTestUser);
+            AssertPageVisible(ultimateQAHomePage);
         }
-       
+
+
+
         [TestMethod]
         [Description("User can fill out form again")]
         public void PretendTest2()
         {
-            var sampleApplicationPage = new SampleApplicationPage(Driver);
-            sampleApplicationPage.GoTo();
+            SampleAppPage.GoTo();
             TheTestUser.GenderType = Gender.Male;
-            var ultimateQAHomePage = sampleApplicationPage.FillOutFormAndSubmit(TheTestUser);
-            Assert.IsTrue(ultimateQAHomePage.IsVisible, "UltimateQA page was not visible");
+            var ultimateQAHomePage = SampleAppPage.FillOutFormAndSubmit(TheTestUser);
+            AssertPageVisible(ultimateQAHomePage);
         }
 
         [TestMethod]
         [Description("Other Gender can fill out form again")]
         public void OtherGenderTest()
         {
-            
-            var sampleApplicationPage = new SampleApplicationPage(Driver);
-            sampleApplicationPage.GoTo();
+            SampleAppPage.GoTo();
             TheTestUser.GenderType = Gender.Other;
-            var ultimateQAHomePage = sampleApplicationPage.FillOutFormAndSubmit(TheTestUser);
-            Assert.IsTrue(ultimateQAHomePage.IsVisible, "UltimateQA page was not visible");
+            var ultimateQAHomePage = SampleAppPage.FillOutFormAndSubmit(TheTestUser);
+            AssertPageVisible(ultimateQAHomePage);
         }
 
         private IWebDriver GetChromeDriver()
@@ -66,9 +67,15 @@ namespace SampleFramework1
         public void SetUpDriverForEachTest()
         {
             Driver = GetChromeDriver();
+            SampleAppPage = new SampleApplicationPage(Driver);
             TheTestUser = new TestUser();
             TheTestUser.firstName = "Wilfred";
             TheTestUser.lastName = "Wooftingtonshire the third";
+        }
+
+        private static void AssertPageVisible(ultimateQAHomePage ultimateQAHomePage)
+        {
+            Assert.IsTrue(ultimateQAHomePage.IsVisible, "UltimateQA page was not visible");
         }
     }
 }
