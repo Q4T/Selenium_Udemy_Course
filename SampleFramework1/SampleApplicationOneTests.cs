@@ -10,6 +10,7 @@ namespace SampleFramework1
 {
     [TestClass]
     [TestCategory("TestApplicationOne")]
+    
     public class SampleApplicationOneTests
     {
         private IWebDriver Driver { get; set; }     // CTRL click on driver on this line to let the IDE change it to Driver wioth a capital D as it is a property not a field. 
@@ -17,14 +18,19 @@ namespace SampleFramework1
         internal SampleApplicationPage SampleAppPage { get; private set; }
       
         public TestUser TheTestUser { get; private set; }
+        public TestUser EmergencyTestUser { get; private set; }
 
         [TestMethod]
         [Description("User can fill out form")]
+        [TestCategory("Regression")]     // can add a catagory of regression
+        [TestCategory("woof")]
         public void Test1()
         {
             SampleAppPage.GoTo(); // has an assertion in the goto method 
             TheTestUser.GenderType = Gender.Female;
-            var ultimateQAHomePage = SampleAppPage.FillOutFormAndSubmit(TheTestUser);
+        //    EmergencyTestUser.GenderType = Gender.Female;
+       //     SampleAppPage.FillOutEmergencyContactForm(EmergencyTestUser);
+            var ultimateQAHomePage = SampleAppPage.FillOutPrimaryUserFormAndSubmit(TheTestUser);
             AssertPageVisible(ultimateQAHomePage);
         }
 
@@ -36,7 +42,7 @@ namespace SampleFramework1
         {
             SampleAppPage.GoTo();
             TheTestUser.GenderType = Gender.Male;
-            var ultimateQAHomePage = SampleAppPage.FillOutFormAndSubmit(TheTestUser);
+            var ultimateQAHomePage = SampleAppPage.FillOutPrimaryUserFormAndSubmit(TheTestUser);
             AssertPageVisible(ultimateQAHomePage);
         }
 
@@ -46,7 +52,7 @@ namespace SampleFramework1
         {
             SampleAppPage.GoTo();
             TheTestUser.GenderType = Gender.Other;
-            var ultimateQAHomePage = SampleAppPage.FillOutFormAndSubmit(TheTestUser);
+            var ultimateQAHomePage = SampleAppPage.FillOutPrimaryUserFormAndSubmit(TheTestUser);
             AssertPageVisible(ultimateQAHomePage);
         }
 
