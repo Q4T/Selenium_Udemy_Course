@@ -3,18 +3,19 @@ using System;
 
 namespace SampleApp2
 {
-    internal class HomePage
+    internal class HomePage : BaseAppPage
     {
-        public HomePage(IWebDriver driver)
+        public HomePage(IWebDriver driver): base(driver)
         {
-            Driver = driver;
+            Slider = new Slider(driver);
+
         }
 
-        public IWebDriver Driver { get; private set; }
+   
         public IWebElement SearchBox => Driver.FindElement(By.Id("search_query_top"));
         public IWebElement SubmitSearchButton => Driver.FindElement(By.XPath("//button[@name='submit_search']"));
 
-        public object Slider { get; internal set; }
+        public Slider Slider { get; internal set; }
 
         internal void GoTo()
         {
@@ -31,4 +32,5 @@ namespace SampleApp2
         }
 
     }
+
 }

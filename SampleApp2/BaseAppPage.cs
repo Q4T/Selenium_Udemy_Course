@@ -4,11 +4,11 @@ namespace SampleApp2
 {
     public class BaseAppPage
     {
-        private IWebDriver driver;
+        public IWebDriver Driver;
 
         public BaseAppPage(IWebDriver driver)
         {
-            this.driver = driver;
+           Driver = driver;
         }
     }
 }

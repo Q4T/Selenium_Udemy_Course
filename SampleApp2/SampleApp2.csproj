@@ -68,6 +68,7 @@
     <Compile Include="SearchFeature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ContactUsFeature.cs" />
+    <Compile Include="Slider.cs" />
     <Compile Include="SliderFeature.cs" />
   </ItemGroup>
   <ItemGroup>

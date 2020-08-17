@@ -8,11 +8,16 @@ namespace SampleApp2
     public class SliderFeature : BaseTest
     {
         [TestMethod]
+        [Description("Adding a subsection of a page as a property to the homepage and then creating a class for it")]
+        [TestCategory("Slider Feature")]
         public void TCID3()
         {
             HomePage homePage = new HomePage(Driver);
             homePage.GoTo();
-            homePage.Slider
+            string firstImage = homePage.Slider.CaptureImage;
+            homePage.Slider.ClickNextButton();
+            string secondImage = homePage.Slider.CaptureImage;
+            Assert.AreNotEqual(firstImage, secondImage);
         }
     }
 }
