@@ -14,19 +14,20 @@ namespace SampleApp2
         public IWebElement SearchBox => Driver.FindElement(By.Id("search_query_top"));
         public IWebElement SubmitSearchButton => Driver.FindElement(By.XPath("//button[@name='submit_search']"));
 
+        public object Slider { get; internal set; }
+
         internal void GoTo()
         {
             Driver.Navigate().GoToUrl("http://automationpractice.com/");
         }
 
-        // why does he create a method on the homepage that calls the searchPage method?
-        // And why does it have to return a new searchPage driver?
-
+        // The search is initiated from the homepage but returns a value on the searchPage and so we need a driver for the search page to check the result so we pass one to it.
         internal SearchPage Search(string itemToSearchFor)
         {
             SearchBox.SendKeys(itemToSearchFor);
             SubmitSearchButton.Submit();
-            return new SearchPage(Driver);  // And why does it have to return a new searchPage driver?
+            return new SearchPage(Driver);  // return a new searchPage driver because it returns the result to the search page and we need to then 
+            // do stuff on that searchPage.
         }
 
     }
