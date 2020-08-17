@@ -3,6 +3,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SampleApp2
 {
+
+    // Lesson 373 How to keep Page objects small
     [TestClass]
     [TestCategory("Test Slider"), TestCategory("SampleApp2")]
     public class SliderFeature : BaseTest

@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NLog;
 using OpenQA.Selenium;
 using System;
 
@@ -6,17 +7,15 @@ namespace SampleApp2
 {
     internal class ContactUsPage :BaseAppPage
     {
-        public IWebDriver Driver { get; private set; }
+        private static Logger _logger = LogManager.GetCurrentClassLogger();
 
         public ContactUsPage(IWebDriver driver) : base(driver)
         {
-            Driver = driver;
         }
 
         internal void GoTo()
         {
             Driver.Navigate().GoToUrl("http://automationpractice.com/index.php?controller=contact");
-          //  Assert.AreEqual(Driver.Title, "Contact us - My Store");
         }
 
         public bool IsLoaded

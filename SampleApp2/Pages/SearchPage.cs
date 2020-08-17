@@ -1,10 +1,13 @@
-﻿using OpenQA.Selenium;
+﻿using NLog;
+using OpenQA.Selenium;
 using System;
 
 namespace SampleApp2
 {
     internal class SearchPage
     {
+        private static Logger _logger = LogManager.GetCurrentClassLogger();
+
         private IWebDriver Driver { get; set; }
 
         public SearchPage(IWebDriver driver)
